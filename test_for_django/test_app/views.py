@@ -19,7 +19,14 @@
 #     c = int(a) + int(b)
 #     return HttpResponse(str(c))
 ###################################################
+# from django.shortcuts import render
+
+# def home(request):
+#     return render(request,'home.html')
+###################################################
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 
 def home(request):
-    return render(request,'home.html')
+    string = u"It is only a test for learning django.(这只是一个简单的测试)"
+    return render(request,'home.html',{'string':string})
