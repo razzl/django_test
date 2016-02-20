@@ -25,8 +25,14 @@
 #     return render(request,'home.html')
 ###################################################
 # -*- coding: utf-8 -*-
+# from django.shortcuts import render
+
+# def home(request):
+#     string = u"It is only a test for learning django.(这只是一个简单的测试)"
+#     return render(request,'home.html',{'string':string})
+###################################################
 from django.shortcuts import render
 
 def home(request):
-    string = u"It is only a test for learning django.(这只是一个简单的测试)"
-    return render(request,'home.html',{'string':string})
+    TutoriaList = ["html","css","jquery","python"]
+    return render(request,'home.html',{'TutoriaList':TutoriaList})
