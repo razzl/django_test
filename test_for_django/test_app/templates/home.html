@@ -12,5 +12,8 @@ IT IS ONLY A TEST!
 {{ i }}
 {% endfor %} -->
 {% for item in List %}
-    {{ item }},
+    {{ item }}
+    {% if not forloop.last%}
+    ,
+    {% endif %}
 {% endfor %}
