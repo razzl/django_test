@@ -30,9 +30,15 @@
 # def home(request):
 #     string = u"It is only a test for learning django.(这只是一个简单的测试)"
 #     return render(request,'home.html',{'string':string})
+# ###################################################
+# from django.shortcuts import render
+
+# def home(request):
+#     TutoriaList = ["html","css","jquery","python"]
+#     return render(request,'home.html',{'TutoriaList':TutoriaList})
 ###################################################
 from django.shortcuts import render
 
 def home(request):
-    TutoriaList = ["html","css","jquery","python"]
-    return render(request,'home.html',{'TutoriaList':TutoriaList})
+    List = map(str,range(100))
+    return render(request,'home.html',{'List':List})
