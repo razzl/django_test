@@ -42,3 +42,6 @@ from django.shortcuts import render
 def home(request):
     List = map(str,range(100))
     return render(request,'home.html',{'List':List})
+def add(request,a,b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
