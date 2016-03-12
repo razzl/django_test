@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     url(r'^add/(\d+)/(\d+)/$','test_app.views.add',name='add'),
     # url(r'^$','test_app.views.home',name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^testdb/$','test_app.views.testdb',name='testdb'),
+    url(r'^testdb/$','people.views.testdb',name='testdb'),
 )
