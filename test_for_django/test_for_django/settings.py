@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_app',
+    'people',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,8 +59,13 @@ WSGI_APPLICATION = 'test_for_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME':'people',
+        'USER':'root',
+        'PASSWORD':'1qaz@WSX',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 
