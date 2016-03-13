@@ -20,10 +20,10 @@ def testdb(request):
     Person.objects.order_by('name')[0:2]
     # 限制返回的数据 相当于 SQL 中的 OFFSET 0 LIMIT 2;
     #数据排序
-    Test.objects.order_by("id")
+    Person.objects.order_by("id")
     
     # 上面的方法可以连锁使用
-    Test.objects.filter(name="razzl").order_by("id")
+    Person.objects.filter(name="razzl").order_by("id")
     
     # 输出所有数据
     for var in list:
