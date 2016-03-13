@@ -26,7 +26,7 @@ def testdb(request):
     Person.objects.filter(name="razzl").order_by("id")
     
     # 输出所有数据
-    for var in list:
+    for var in data:
         response1 += var.name + " "
     response = response1
     return HttpResponse("<p>" + response + "</p>")
