@@ -15,4 +15,5 @@ urlpatterns = patterns('',
     url(r'^testdb/$','people.views.testdb',name='testdb'),
     url(r'^search_form/$','people.views.search_form',name='search_form'),
     url(r'^search/$','people.views.search',name='search'),
+    url(r'^search-post/$','people.views.search-post',name='search-post'),
 )
