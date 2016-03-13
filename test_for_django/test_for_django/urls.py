@@ -13,4 +13,6 @@ urlpatterns = patterns('',
     # url(r'^$','test_app.views.home',name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^testdb/$','people.views.testdb',name='testdb'),
+    url(r'^search_form/$','people.views.search_form',name='search_form'),
+    url(r'^search/$','people.views.search',name='search'),
 )
