@@ -27,5 +27,6 @@ def testdb(request):
     
     # 输出所有数据
     for var in data:
-        response += var.name + " "
-    return HttpResponse("<p>" + response + response2 + response3 "</p>")
+        response1 += var.name + " "
+    response = response1
+    return HttpResponse("<p>" + response + "</p>")
