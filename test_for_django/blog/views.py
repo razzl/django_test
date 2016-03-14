@@ -12,4 +12,4 @@ def get_articles(request,tag_name):
     return render(request,'blog/idex.html',{'post_list':post_list})
 def detail(request,id):
     post = Article.objects.get(id = str(id))
-    return render(request,'blog/idex.html',{'post':post})
+    return render(request,'blog/index.html',{'post':post})
