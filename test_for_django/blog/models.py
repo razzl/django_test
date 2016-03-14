@@ -17,7 +17,7 @@ class Tag(models.Model):
 class Article(models.Model):
     title = models.CharField('标题',max_length=100)
     tag = models.ManyToManyField(Tag,max_length=50,blank=True)
-    data_time = models.DateTimeField('日期'，auto_now_add=True)
+    data_time = models.DateTimeField('日期',auto_now_add=True)
     content = models.TextField('内容'，blank=True,null=True)
 
     def __unicode__(self):
