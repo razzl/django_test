@@ -6,10 +6,10 @@ from blog.models import Article,Tag
 def home(request):
     # return HttpResponse("<label style='color: ff0000'>Hello World</label>")
     post_list = Article.objects.all()
-    return render(request,'blog/index.html',{'post_list':post_list})
+    return render(request,'index.html',{'post_list':post_list})
 def get_articles(request,tag_name):
     posts = Article.objects.filter(tag_tag_name = tag_name)
-    return render(request,'blog/idex.html',{'post_list':post_list})
+    return render(request,'idex.html',{'post_list':post_list})
 def detail(request,id):
     post = Article.objects.get(id = str(id))
-    return render(request,'blog/index.html',{'post':post})
+    return render(request,'index.html',{'post':post})
