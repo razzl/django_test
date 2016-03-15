@@ -34,7 +34,7 @@
                             <h2><a href="" target="_blank">{{ post.title }}</a></h2>
  
                                 <p>
-                                    日期:  <label href="#">{{ post.data_time }}</label>
+                                    日期:  <label href="#">{{ post.data_time | date:"Y /m /d H:i:s" }}</label>
                                 </p>
                         </header>
                     </section>
