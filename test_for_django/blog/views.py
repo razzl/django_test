@@ -10,7 +10,7 @@ def home(request):
     # return HttpResponse("")
 def get_articles(request,tag_name):
     posts = Article.objects.filter(tag_tag_name = tag_name)
-    return render(request,'idex.html',{'post_list':post_list})
+    return render(request,'index.html',{'post_list':post_list})
 def detail(request,id):
     post = Article.objects.get(id = str(id))
-    return render(request,'index.html',{'post':post})
+    return render(request,'detail.html',{'post':post})
