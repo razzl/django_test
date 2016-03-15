@@ -7,6 +7,7 @@ def home(request):
     # return HttpResponse("<label style='color: ff0000'>Hello World</label>")
     post_list = Article.objects.all()
     return render(request,'index.html',{'post_list':post_list})
+    # return HttpResponse("")
 def get_articles(request,tag_name):
     posts = Article.objects.filter(tag_tag_name = tag_name)
     return render(request,'idex.html',{'post_list':post_list})
