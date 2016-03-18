@@ -3,6 +3,7 @@ from sql_injection.models import Sql_test_user
 from django.http import HttpResponse
 # Create your views here.
 
-def get_user(request,name):
+def get_user(request):
+    name = request.GET['name']
     user = Sql_test_user.objects.get(user_name = name)
     return HttpResponse(user.user_name+user.user_passwd+"123")
