@@ -87,7 +87,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/root/django_project/django_test/test_for_django/blog/static'
+STATIC_URL = '/root/django_project/django_test/test_for_django/blog/static/'
 #templates
 # TEMPLATES = [
 #     {
