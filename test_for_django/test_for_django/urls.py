@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls')),
+    url(r'^sql/', include('sql_injection.urls')),
     url(r'^$','blog.views.home',name='home'),
     # url(r'^blog/',include('blog.urls')),
 )
