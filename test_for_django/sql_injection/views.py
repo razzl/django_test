@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 def get_user(request,name):
     user = Sql_test_user.objects.filter(user_name = name)
-    return HttpResponse(user.user_name+user.user_passwd)
+    return HttpResponse(user.user_name+user.user_passwd+"123")
