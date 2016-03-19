@@ -9,5 +9,5 @@ def get_user(request):
     # user = Sql_test_user.objects.get(user_name = name)
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE user_name = name")
-    user = [row[0] for row in cursor.fetchall()]
-    return HttpResponse('username:'user[user_name]+'\n'+'user password:'+user[user_passwd])
+    user = cursor.fetchall()
+    return render(request,'sql_test_user.html',{'user':user})
