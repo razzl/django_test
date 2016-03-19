@@ -1,5 +1,39 @@
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.hovertable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+table.hovertable th {
+    background-color:#c3dde0;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.hovertable tr {
+    background-color:#d4e3e5;
+}
+table.hovertable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+</style>
+<!-- Table goes in the document BODY -->
+<table class="hovertable">
+<tr>
+    <th>User Name</th><th>User Passwd</th><th>User Age</th>
+</tr>
 {% for row in user %}
-    <h1>{{ row.1 }}</h1>
-    <h1>{{ row.2 }}</h1>
-    <h1>{{ row.3 }}</h1>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td>{{ row.1 }}</td><td>{{ row.2 }}</td><td>{{ row.3 }}</td>
+</tr>
 {% endfor %}
+</tr>
+</table>
