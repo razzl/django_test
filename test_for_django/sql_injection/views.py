@@ -11,4 +11,4 @@ def get_user(request):
     cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE user_name ="+"'" + name+"'")
     user = cursor.fetchall()
     # return render(request,'sql_test_user.html',{'user':user})
-    return HttpResponse(user[0])
+    return HttpResponse(user[0][1])
