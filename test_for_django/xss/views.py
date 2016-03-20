@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import connection
 # Create your views here.
-
+from django.template import Context, Template
 def xss_1(request):
     name = request.GET['name']
     # user = Sql_test_user.objects.get(user_name = name)
@@ -11,6 +11,7 @@ def xss_1(request):
     # cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE user_name ="+"'" + name+"'")
     # user = cursor.fetchall()
     # return HttpResponse("<h2>{{ name|safe }}</h2>")
-    context = {'name': name}
-    return render(request, '<h2>{{ name|safe }}</h2>', context)
+    t = Template('<h2>if you input something, it will show on the page:{{ name|safe }}</h2>')
+    c = Context({'name': name})
+    return t.render(c)
 # Create your views here.
