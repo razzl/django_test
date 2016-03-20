@@ -10,5 +10,7 @@ def xss_1(request):
     # cursor = connection.cursor()
     # cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE user_name ="+"'" + name+"'")
     # user = cursor.fetchall()
-    return HttpResponse("<h2>{{ name|safe }}</h2>")
+    # return HttpResponse("<h2>{{ name|safe }}</h2>")
+    context = {'name': name}
+    return render(request, '<h2>{{ name|safe }}</h2>', context)
 # Create your views here.
