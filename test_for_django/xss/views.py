@@ -13,5 +13,5 @@ def xss_1(request):
     # return HttpResponse("<h2>{{ name|safe }}</h2>")
     t = Template('<h2>if you input something, it will show on the page:{{ name|safe }}</h2>')
     c = Context({'name': name})
-    return t.render(c)
+    return HttpResponse(t.render(c))
 # Create your views here.
