@@ -12,3 +12,13 @@ def get_user(request):
     user = cursor.fetchall()
     return render(request,'sql_test_user.html',{'user':user})
     # return HttpResponse(user[0][1])
+def get_user_2(request):
+    name = request.GET['name']
+    # user = Sql_test_user.objects.get(user_name = name)
+    for i in name:
+        if i == ' ':
+            return HttpResponse("<h2>There is some spaces in your string!</h2>")
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE user_name ="+"'" + name+"'")
+    user = cursor.fetchall()
+    return render(request,'sql_test_user.html',{'user':user})
