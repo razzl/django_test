@@ -6,6 +6,7 @@ from django.db import connection
 from django.template import Context, Template
 import re
 def xss_1(request):
+    name = request.GET['name']
     t = Template('<h2>if you input something, it will show on the page:{{ name|safe }}</h2>')
     c = Context({'name': name})
     return HttpResponse(t.render(c))
