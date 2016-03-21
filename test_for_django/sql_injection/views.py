@@ -25,7 +25,7 @@ def get_user_2(request):
 def get_user_3(request):
     userid = request.GET['id']
     pattern = re.compile(r'^\d+$',re.M)
-    if pattern.match(userid)!=None:
+    if pattern.match(userid)==None:
         return HttpResponse("<h2>Your input id is not a integer!</h2>"+userid)
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM  sql_injection_sql_test_user WHERE id =" + userid)
