@@ -23,7 +23,7 @@ def get_user_2(request):
     user = cursor.fetchall()
     return render(request,'sql_test_user.html',{'user':user})
 def get_user_3(request):
-    userid = request.GET['id']
+    userid = int(request.GET['id'])
     pattern = re.compile(r'^\d+$',re.M)
     if pattern.match(userid)!=True:
         return HttpResponse("<h2>Your input id is not a integer!</h2>")
